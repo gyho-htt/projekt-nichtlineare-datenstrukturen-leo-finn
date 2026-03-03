@@ -48,45 +48,35 @@ public class Song implements ComparableContent<Song>{
       if(this.titel.compareTo(pSong.getTitel()) < 0){
         return true;
       }
-      else {
-        return false;
-      } // end of if-else
+      
     }
     else if(vergleich == "Kuenstler"){
       if(this.kuenstler.compareTo(pSong.getKuenstler()) < 0){
         return true;
       }
-      else {
-        return false;
-      } // end of if-else
+      
     }
     else if(vergleich == "Genre"){
       if(this.genre.compareTo(pSong.getGenre()) < 0){
         return true;
       }
-      else {
-        return false;
-      } // end of if-else
+      
     }
     else if(vergleich == "Laufzeit"){
       if(this.laufzeit < pSong.getLaufzeit()){
         return true;
       }
-      else {
-        return false;
-      } // end of if-else
+      
     }
     else if(vergleich == "Streams"){
       if(this.streams < pSong.getStreams()){
         return true;
       }
-      else {
-        return false;
-      } // end of if-else
+      
     }
-    else {
-      return false;
-    } // end of if-else
+    
+    return false;
+    // end of if-else
   }
     
   public boolean isGreater(Song pSong){
@@ -94,45 +84,35 @@ public class Song implements ComparableContent<Song>{
       if(this.titel.compareTo(pSong.getTitel()) > 0){
         return true;
       }
-      else {
-        return false;
-      } // end of if-else
+      // end of if-else
     }
     else if(vergleich == "Kuenstler"){
       if(this.kuenstler.compareTo(pSong.getKuenstler()) > 0){
         return true;
       }
-      else {
-        return false;
-      } // end of if-else
+      // end of if-else
     }
     else if(vergleich == "Genre"){
       if(this.genre.compareTo(pSong.getGenre()) > 0){
         return true;
       }
-      else {
-        return false;
-      } // end of if-else
+      // end of if-else
     }
     else if(vergleich == "Laufzeit"){
       if(this.laufzeit > pSong.getLaufzeit()){
         return true;
       }
-      else {
-        return false;
-      } // end of if-else
+      // end of if-else
     }
     else if(vergleich == "Streams"){
       if(this.streams > pSong.getStreams()){
         return true;
       }
-      else {
-        return false;
-      } // end of if-else
+      // end of if-else
     }
-    else {
-      return false;
-    } // end of if-else
+    
+    return false;
+    // end of if-else
   }
     
   public boolean isEqual(Song pSong){
