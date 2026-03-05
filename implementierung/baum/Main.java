@@ -8,7 +8,7 @@ public class Main{
     List<Song> L = SW.searchTitel("Stayin' alive");
     
     
-    
+    L.toFirst();
     while(L.hasAccess()){
       System.out.println(L.getContent().getKuenstler());
       L.next();

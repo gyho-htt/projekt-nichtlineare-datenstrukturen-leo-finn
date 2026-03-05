@@ -26,6 +26,7 @@ public class Songverwaltung{
     Song s = new Song(pTitel, "", 0, 0, "");
     List<Song> result = new List<Song>();
     BinarySearchTree<Song> BST = titelBST;
+    s.setVergleich("Titel");
     
     while (BST.search(s) != null) { 
       result.append(BST.search(s));
