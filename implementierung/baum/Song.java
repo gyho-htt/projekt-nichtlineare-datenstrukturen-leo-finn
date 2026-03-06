@@ -45,33 +45,17 @@ public class Song implements ComparableContent<Song>{
   
   public boolean isLess(Song pSong){
     if(vergleich == "Titel"){
-      if(this.titel.compareTo(pSong.getTitel()) < 0){
-        return true;
-      }
+      return this.titel.compareTo(pSong.getTitel()) < 0;
       
     }
-    else if(vergleich == "Kuenstler"){
-      if(this.kuenstler.compareTo(pSong.getKuenstler()) < 0){
-        return true;
-      }
       
-    }
-    else if(vergleich == "Genre"){
-      if(this.genre.compareTo(pSong.getGenre()) < 0){
-        return true;
-      }
-      
-    }
+    
     else if(vergleich == "Laufzeit"){
-      if(this.laufzeit < pSong.getLaufzeit()){
-        return true;
-      }
+      return this.laufzeit < pSong.getLaufzeit();
       
     }
     else if(vergleich == "Streams"){
-      if(this.streams < pSong.getStreams()){
-        return true;
-      }
+      return this.streams < pSong.getStreams();
       
     }
     
@@ -81,33 +65,16 @@ public class Song implements ComparableContent<Song>{
     
   public boolean isGreater(Song pSong){
     if(vergleich == "Titel"){
-      if(this.titel.compareTo(pSong.getTitel()) > 0){
-        return true;
-      }
+     return this.titel.compareTo(pSong.getTitel()) > 0;
       // end of if-else
     }
-    else if(vergleich == "Kuenstler"){
-      if(this.kuenstler.compareTo(pSong.getKuenstler()) > 0){
-        return true;
-      }
-      // end of if-else
-    }
-    else if(vergleich == "Genre"){
-      if(this.genre.compareTo(pSong.getGenre()) > 0){
-        return true;
-      }
-      // end of if-else
-    }
+    
     else if(vergleich == "Laufzeit"){
-      if(this.laufzeit > pSong.getLaufzeit()){
-        return true;
-      }
+     return this.laufzeit > pSong.getLaufzeit();
       // end of if-else
     }
     else if(vergleich == "Streams"){
-      if(this.streams > pSong.getStreams()){
-        return true;
-      }
+      return this.streams > pSong.getStreams();
       // end of if-else
     }
     
