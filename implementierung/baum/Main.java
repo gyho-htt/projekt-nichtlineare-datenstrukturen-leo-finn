@@ -9,8 +9,13 @@ public class Main{
     List<Song> L = SW.searchGenre("Pop");
     
     L.toFirst();
+<<<<<<< HEAD
     while (L.hasAccess()) { 
       System.out.println(L.getContent().getTitel());
+=======
+    while(L.hasAccess()){
+      System.out.println(L.getContent().getKuenstler());
+>>>>>>> 3cb3dcb05bcf0904dafdd2c76ed60c4e74a193bb
       L.next();
     } // end of while
     

@@ -4,7 +4,7 @@ public class Song implements ComparableContent<Song>{
   int laufzeit;
   int streams;
   String genre;
-  String vergleich;
+  String vergleich = "";
        
        
   public Song(String pTitel, String pKuenstler, int pLaufzeit, int pStreams, String pGenre){
@@ -44,8 +44,15 @@ public class Song implements ComparableContent<Song>{
   }
   
   public boolean isLess(Song pSong){
+<<<<<<< HEAD
     if(vergleich == "Titel"){
       return this.titel.compareTo(pSong.getTitel()) < 0;
+=======
+    if(vergleich.equals("Titel")){
+      if(this.titel.compareTo(pSong.getTitel()) < 0){
+        return true;
+      }
+>>>>>>> 3cb3dcb05bcf0904dafdd2c76ed60c4e74a193bb
       
     }
       
@@ -64,8 +71,27 @@ public class Song implements ComparableContent<Song>{
   }
     
   public boolean isGreater(Song pSong){
+<<<<<<< HEAD
     if(vergleich == "Titel"){
      return this.titel.compareTo(pSong.getTitel()) > 0;
+=======
+    if(vergleich.equals("Titel")){
+      if(this.titel.compareTo(pSong.getTitel()) > 0){
+        return true;
+      }
+      // end of if-else
+    }
+    else if(vergleich == "Kuenstler"){
+      if(this.kuenstler.compareTo(pSong.getKuenstler()) > 0){
+        return true;
+      }
+      // end of if-else
+    }
+    else if(vergleich == "Genre"){
+      if(this.genre.compareTo(pSong.getGenre()) > 0){
+        return true;
+      }
+>>>>>>> 3cb3dcb05bcf0904dafdd2c76ed60c4e74a193bb
       // end of if-else
     }
     
@@ -83,11 +109,8 @@ public class Song implements ComparableContent<Song>{
   }
     
   public boolean isEqual(Song pSong){
-    if(!this.isLess(pSong) && !this.isGreater(pSong)) {
-      return true;
-    }
-    else {
-      return false;
-    } // end of if-else
+    
+    return !this.isLess(pSong) && !this.isGreater(pSong);
+
   }
 }

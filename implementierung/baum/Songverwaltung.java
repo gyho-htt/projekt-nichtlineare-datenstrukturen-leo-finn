@@ -41,6 +41,11 @@ public class Songverwaltung{
   
   public Song searchTitel(String pTitel){
     Song s = new Song(pTitel, "", 0, 0, "");
+<<<<<<< HEAD
+=======
+    List<Song> result = new List<Song>();
+    BinarySearchTree<Song> BST = titelBST;
+>>>>>>> 3cb3dcb05bcf0904dafdd2c76ed60c4e74a193bb
     s.setVergleich("Titel");
     
     return titelBST.search(s);
