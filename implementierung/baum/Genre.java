@@ -20,7 +20,7 @@ public class Genre implements ComparableContent<Genre>{
   }
   
   public boolean isLess(Genre pGenre){
-    return this.name.compareTo(pGenre.getName()) < 0 ;
+    return this.name.compareTo(pGenre.getName()) < 0;
   }
   
   public boolean isGreater(Genre pGenre){
